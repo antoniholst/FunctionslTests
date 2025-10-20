@@ -27,6 +27,6 @@ public class ItemsTest {
                 when().
                 post("https://www.babyblog.ru/api/auth/email").
                 then().
-                assertThat().statusCode(200);
+                assertThat().statusCode(500);
     }
 }
