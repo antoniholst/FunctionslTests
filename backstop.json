@@ -1,0 +1,67 @@
+{
+  "id": "backstop_default",
+  "viewports": [
+  {
+      "label": "browser",
+      "width": 1366,
+      "height": 784
+    },
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "Website Loginpage",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "https://www.babyblog.ru/login",
+      "referenceUrl": "https://www.babyblog.ru/login",
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 5000,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": [
+    "--no-sandbox",
+    "--disable-setuid-sandbox",
+    "--disable-gpu",
+    "--disable-dev-shm-usage",
+    "--single-process"
+    ],
+    "executablePath": "/Users/antoninakholostova/.cache/puppeteer/chrome/mac-142.0.7444.59/chrome-mac-x64/Chrome.app/Contents/MacOS/Google Chrome for Testing"
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false,
+  "timeout": 60000
+}
